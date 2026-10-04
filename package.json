@@ -1,0 +1,28 @@
+{
+	"name": "pi-notify-kde",
+	"version": "0.1.0",
+	"description": "Desktop notification plus a KDE Connect phone push when pi needs you: a run finished, or pi is blocked on a prompt.",
+	"keywords": ["pi-package", "pi", "kde", "kdeconnect", "notification", "notify-send", "desktop-notification"],
+	"license": "MIT",
+	"type": "module",
+	"repository": { "type": "git", "url": "git+https://github.com/Ahrunda/pi-notify-kde.git" },
+	"bugs": { "url": "https://github.com/Ahrunda/pi-notify-kde/issues" },
+	"homepage": "https://github.com/Ahrunda/pi-notify-kde#readme",
+	"files": ["extensions", "docs", "tools", "install.sh", "README.md", "README.zh.md", "LICENSE"],
+	"pi": {
+		"extensions": ["extensions/notify-kde.ts"]
+	},
+	"scripts": {
+		"test": "node --test test/",
+		"smoke": "node tools/smoke.ts",
+		"typecheck": "tsc --noEmit"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "^1.0.2",
+		"@types/node": "^22.0.0",
+		"typescript": "^5.6.0"
+	}
+}
