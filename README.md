@@ -68,6 +68,10 @@ cd pi-notify-kde && ./install.sh
 `install.sh` copies `extensions/notify-kde.ts` to `~/.pi/agent/extensions/notify-kde.ts`, backing up
 any previous file to `.bak`. Undo with `rm ~/.pi/agent/extensions/notify-kde.ts`.
 
+> **Pick one, not both.** `install.sh` installs a *personal extension file*; `pi install` registers a
+> *package*. Pi loads both, so doing both runs the extension twice and you get every notification
+> twice. Undo the package one with `pi remove git:github.com/Ahrunda/pi-notify-kde`.
+
 Then, inside pi:
 
 ```

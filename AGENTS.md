@@ -8,6 +8,10 @@ A single-file pi extension, distributed three ways: as a pi package (`extensions
 conventionally, see `package.json` `pi.extensions`), as `./install.sh` (copies the one file to
 `~/.pi/agent/extensions/notify-kde.ts`), and as a manual copy.
 
+The package route and the `install.sh` route are **alternatives, not additive**: pi loads a personal
+extension file *and* package extensions, so doing both runs the extension twice and sends every
+notification twice.
+
 ## Hard constraints
 
 1. **`extensions/notify-kde.ts` must stay a single, self-contained file.** `install.sh` copies

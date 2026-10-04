@@ -65,6 +65,10 @@ cd pi-notify-kde && ./install.sh
 `install.sh` 把 `extensions/notify-kde.ts` 复制到 `~/.pi/agent/extensions/notify-kde.ts`，
 原有文件先备份成 `.bak`。撤销：`rm ~/.pi/agent/extensions/notify-kde.ts`。
 
+> **两种方式只能选一种。** `install.sh` 装的是*个人扩展文件*，`pi install` 注册的是*包*。
+> pi 两者都会加载，所以同时做会跑两遍、每条通知收到两次。
+> 撤掉包那份：`pi remove git:github.com/Ahrunda/pi-notify-kde`。
+
 然后在 pi 里：
 
 ```
